@@ -98,13 +98,13 @@ int main(int argc, const char * argv[]) {
         }
         else {
             if (emptyPrinted == false) {
-                out << "Deck empty" << endl << endl; //letting the user know tha tthe deck is empty so the game is finishing soon
+                out << "Deck empty" << endl << endl; //letting the user know that the deck is empty so the game is finishing soon
                 emptyPrinted = true;
             }
         }
 
-        //p1's lookBook
-        if(p1.checkHandForBook(tempC1, tempC2)) {
+        //looking in Book
+        if(p1.getHandSize() >= 2 && p1.checkHandForBook(tempC1, tempC2)) {
             p1.bookCards(p1.removeCardFromHand(tempC1), p1.removeCardFromHand(tempC2));
 	}
 
@@ -132,7 +132,7 @@ int main(int argc, const char * argv[]) {
                 }
         }
         //looking in Book
-        if(p2.checkHandForBook(tempC1, tempC2)) {
+        if(p2.getHandSize() >= 2 && p2.checkHandForBook(tempC1, tempC2)) {
             p2.bookCards(p2.removeCardFromHand(tempC1), p2.removeCardFromHand(tempC2));
         }
         //check to see if there is a winner
