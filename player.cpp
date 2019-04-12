@@ -84,10 +84,10 @@ Card Player::removeCardFromHand(Card c) {
 
 //creates string output of the player
 string Player::showHand() const {
-    string out;
+    string out; //result
 
     for (int i = 0; i < myHand.size(); i++) { //displays the hand
-        out.append(myHand[i].toString() + " ");
+        out += (myHand[i].toString() + " ");
     }
     return out;
 }
